@@ -2,7 +2,7 @@
     var Fixtures = {};
     
     
- var albumPicasso = {
+    var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
      label: 'Cubism',
@@ -17,7 +17,7 @@
      ]
  };
 
- var albumMarconi = {
+    var albumMarconi = {
      title: 'The Telephone',
      artist: 'Guglielmo Marconi',
      label: 'EM',
@@ -31,6 +31,10 @@
          { title: 'Wrong phone number', duration: '2:15'}
      ]
  };
+    
+    Fixtures.getAlbum = function(){
+        return albumPicasso;
+};
     
     return Fixtures;
 }
