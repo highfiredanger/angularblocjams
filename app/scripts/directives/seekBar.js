@@ -14,11 +14,14 @@
             replace: true,
             restrict: 'E',
             scope: { 
-                onChange: '&'
+                onChange: '&',
+                setVolume: '&'
+                
             },
             link: function(scope, element, attributes){
                 scope.value = 0;
                 scope.max = 100;
+                scope.volume = 0;
                 
                 var seekBar = $(element);
                 
@@ -29,6 +32,11 @@
                 attributes.$observe('max', function(newValue) {
                     scope.max = newValue;
                 });
+                
+                attributes.$observe('volume', function(newValue) {
+                    scope.volume = newValue;
+                });
+                
                 
                 var percentString = function (){
                     var value = scope.value;
@@ -69,6 +77,7 @@
                 var notifyOnChange = function(newValue){
                     if (typeof scope.onChange === 'function'){
                         scope.onChange({value: newValue});
+                        scope.onChange({volume: newValue});
                     }
                 };
             }

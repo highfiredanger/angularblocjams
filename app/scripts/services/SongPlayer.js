@@ -18,6 +18,14 @@
             }
         };
         
+        SongPlayer.volume = 0; 
+        
+        SongPlayer.setVolume = function(volume){
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+            }
+        };
+        
         /**
         * @desc Private attribute; assigns albumPicasso to currentAlbum, I think. 
         * @type {Object}
