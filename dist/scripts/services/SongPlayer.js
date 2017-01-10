@@ -60,7 +60,8 @@
             
             currentBuzzObject = new buzz.sound(song.audioURL, {
                 formats: ['mp3'],
-                preload: true
+                preload: true,
+                autoplay: true
             });
             
             currentBuzzObject.bind('timeupdate', function(){
