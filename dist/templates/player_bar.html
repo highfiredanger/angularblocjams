@@ -21,7 +21,7 @@
         <div class="control-group currently-playing" ng-controller="AlbumCtrl as album">
             <h2 class="song-name">{{album.songPlayer.currentSong.title}}</h2>
             <div class="seek-control">
-                <seek-bar value="{{ playerBar.songPlayer.currentTime }}" max="{{ playerBar.songPlayer.currentSong.duration }}" on-change="playerBar.songPlayer.setCurrentTime(value)"></seek-bar>
+                <seek-bar value="{{ playerBar.songPlayer.currentTime }}" max="{{ playerBar.songPlayer.currentSong.duration }}" on-change="playerBar.songPlayer.setCurrentTime(value1)"></seek-bar>
                 <div class="current-time">{{playerBar.songPlayer.currentTime}}</div>
                 <div class="total-time">{{album.songPlayer.currentSong.duration}}</div>
             </div>
